@@ -1,0 +1,21 @@
+#include <Servo.h>
+int up=90;
+int down=120;
+Servo servo1;
+
+void setup() {
+  servo1.attach(9);
+  servo1.write(40);//pull the nib up
+  delay(3000);//waits 3 seconds to enter the phone
+  servo1.write(down);
+  delay(200);
+  servo1.write(up);
+  delay(770);
+}
+
+void loop() {
+  servo1.write(down); //1
+  delay(200);
+  servo1.write(up);//0
+  delay(600);
+}
